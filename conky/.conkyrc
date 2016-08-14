@@ -1,0 +1,14 @@
+out_to_x no
+out_to_console yes
+
+default_color white
+
+
+#${if_up wlp2s0}${wireless_essid wlp2s0}: ${wireless_link_qual_perc wlp2s0}% | $endif\
+
+TEXT
+CPU: ${loadavg} | \
+RAM: ${mem}/${memmax} | \
+VOL: ${exec volcheck} | \
+BAT: ${battery_percent}% | \
+${time %a %d/%m %R}
