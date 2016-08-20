@@ -28,7 +28,7 @@ font pango:DejaVu Sans Mono 10
 exec wicd-gtk -t
 exec dropbox
 exec redshift-gtk
-exec --no-startup-id xmodmap ~/.xmodmap
+exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id /usr/lib64/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xbanish
