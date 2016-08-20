@@ -95,6 +95,17 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# move workspace to different randr outputs
+bindsym $mod+Mod1+$left move workspace to output left
+bindsym $mod+Mod1+$down move workspace to output down
+bindsym $mod+Mod1+$up move workspace to output up
+bindsym $mod+Mod1+$right move workspace to output right
+
+bindsym $mod+Mod1+Left move workspace to output left
+bindsym $mod+Mod1+Down move workspace to output down
+bindsym $mod+Mod1+Up move workspace to output up
+bindsym $mod+Mod1+Right move workspace to output right
+
 # split in horizontal orientation
 bindsym $mod+backslash split h
 
@@ -130,12 +141,12 @@ bindsym $mod+v scratchpad show
 
 # switch to next, previous, and last workspace
 bindsym $mod+n workspace next
-bindsym $mod+p workspace previous
+bindsym $mod+p workspace prev
 bindsym $mod+a workspace back_and_forth
 
 # move to next, previous and last workspace
 bindsym $mod+Shift+n move container to workspace next
-bindsym $mod+Shift+p move container to workspace previous
+bindsym $mod+Shift+p move container to workspace prev
 bindsym $mod+Shift+a move container to workspace back_and_forth
 
 # switch to workspace
@@ -199,8 +210,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command conky
-	mode dock
+        position top
+	mode hide
         font pango:DejaVu Sans Mono 10
+        binding_mode_indicator yes
 }
 
 # Mode for suspend/hibernate/shut-down
@@ -220,7 +233,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+End mode "$mode_system"
 
 
 #######################################################################
