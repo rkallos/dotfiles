@@ -17,7 +17,7 @@ compinit
 HISTFILE=~/.history
 HISTSIZE=5000
 SAVEHIST=5000
-setopt appendhistory autocd extendedglob notify
+setopt appendhistory autocd extendedglob notify histignorespace
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
