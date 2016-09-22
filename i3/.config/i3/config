@@ -25,13 +25,13 @@ font pango:DejaVu Sans Mono 10
 #force_xinerama yes
 
 # Exec startup applications
-exec wicd-gtk -t
-exec dropbox
-exec redshift-gtk
-exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id /usr/lib64/gnome-settings-daemon/gnome-settings-daemon
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id xbanish
+# exec wicd-gtk -t
+# exec dropbox
+# exec redshift-gtk
+# exec --no-startup-id /usr/lib64/gnome-settings-daemon/gnome-settings-daemon
+# exec --no-startup-id nitrogen --restore
+# exec xmodmap ~/.Xmodmap
+# exec --no-startup-id xbanish
 
 # Set modifier key
 set $mod Mod4
@@ -218,6 +218,9 @@ bar {
 
 # Mode for suspend/hibernate/shut-down
 set $Locker i3lock -c "#000000"&& sleep 1
+
+# Remove titlebars
+new_window pixel 3
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
