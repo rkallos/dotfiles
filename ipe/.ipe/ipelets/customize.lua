@@ -1,0 +1,1 @@
+prefs.external_editor = "emacsclient -cn %s"
