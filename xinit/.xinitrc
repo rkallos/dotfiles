@@ -1,7 +1,7 @@
-xrdb ~/.Xresources &
+[[ -f .Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 xmodmap ~/.Xmodmap &
-nitrogen --restore &
-dropbox &
+redshift &
+dropbox start &
 xbanish &
 
 # exec i3
